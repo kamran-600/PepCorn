@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/upperBlue"
+    tools:context=".SignUpActivity">
+
+    <RelativeLayout
+
+        android:layout_width="300dp"
+        android:layout_height="380dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/signup_card">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/upperBlue"
+            android:layout_marginTop="50dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:foregroundGravity="center"
+            app:endIconMode="clear_text"
+            app:boxStrokeColor="@color/upperBlue"
+            app:hintTextColor="@color/upperBlue">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Enter Email*"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/upperBlue"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/form_cursor"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailLayout"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:foregroundGravity="center"
+            app:endIconMode="password_toggle"
+            app:boxStrokeColor="@color/upperBlue"
+            app:hintTextColor="@color/upperBlue">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Create Password*"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/upperBlue"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/form_cursor"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#1AB646"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Already registered?"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/login"
+            android:textColor="#36ED4E"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
